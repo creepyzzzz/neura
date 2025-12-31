@@ -77,7 +77,7 @@ const FAQ: React.FC = () => {
                placeholder="Search for a question..." 
                className="w-full bg-white border-b-2 border-gray-300 py-3 md:py-4 pl-0 pr-10 md:pr-12 text-base md:text-xl outline-none focus:border-neuera-orange transition-all duration-300 placeholder:text-gray-500 text-neuera-dark"
              />
-             <Search className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-neuera-orange transition-colors" size={18} className="md:w-6 md:h-6" />
+             <Search className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-neuera-orange transition-colors md:w-6 md:h-6" size={18} />
            </div>
         </div>
 

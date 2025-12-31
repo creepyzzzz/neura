@@ -17,7 +17,7 @@ const ProjectCard: React.FC<{
     <div className="absolute inset-0 p-4 md:p-12 flex flex-col justify-between">
       <div className="flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
          <div className="w-10 h-10 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center">
-            <ArrowRight className="text-neuera-dark" size={16} className="md:w-5 md:h-5" />
+            <ArrowRight className="text-neuera-dark md:w-5 md:h-5" size={16} />
          </div>
       </div>
       
