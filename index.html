@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+    <title>Neuera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'TS Block Bold';
+        src: url('/fonts/TSBlockBold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F8FCF9;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, h5, h6, .font-display {
+        font-family: 'Bebas Neue', sans-serif;
+      }
+      
+      /* TS Block Bold font for hero section only - highest specificity to override Tailwind */
+      h1.font-ts-bold.font-display,
+      h1.font-ts-bold,
+      .font-ts-bold.font-display,
+      .font-ts-bold {
+        font-family: 'TS Block Bold', 'Bebas Neue', sans-serif !important;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F8FCF9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0f392b; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #C9EF5B; 
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      @keyframes slideDown {
+        from { transform: translateY(-100%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0; /* Start hidden */
+      }
+      
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-slide-down {
+        animation: slideDown 0.5s ease-out forwards;
+      }
+
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
+
+      /* Link Hover Effect */
+      .link-underline {
+        border-bottom-width: 0;
+        background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+        background-size: 0 1px;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size .3s ease-in-out;
+      }
+      .link-underline:hover {
+        background-size: 100% 1px;
+        background-position: 0 100%;
+      }
+
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neuera: {
+                red: '#0f392b',     /* Deep Forest Green - Replaces Red */
+                dark: '#022c22',    /* Very Dark Green/Black - Replaces Dark Blue */
+                pink: '#FAE4AA',    /* Pale Yellow - Replaces Pink */
+                orange: '#C9EF5B',  /* Lime Green - Replaces Orange */
+                purple: '#8AF0BE',  /* Mint Green - Replaces Purple */
+                salmon: '#A3E635',  /* Bright Lime - Replaces Salmon */
+                'bg-cream': '#F8FCF9' /* Minty White - Replaces Cream */
+              }
+            },
+            fontFamily: {
+              display: ['Bebas Neue', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            fontSize: {
+              'fluid-hero': 'clamp(2.5rem, 8vw + 0.5rem, 9rem)',
+              'fluid-h2': 'clamp(1.75rem, 4vw + 0.5rem, 5rem)',
+              'fluid-h3': 'clamp(1.25rem, 2.5vw + 0.25rem, 3rem)',
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?deps=react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?deps=react@18.2.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
